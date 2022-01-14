@@ -1,0 +1,76 @@
+<body background="https://www.esporteinterativo.com.br/__export/1574547049799/sites/esporteinterativo/img/2019/11/23/gettyimages-1189601063.jpg_423682103.jpg">
+    <div wm-slide>
+        <p class="Passediego1"></p> 
+        <p class="passediego2"></p>
+        
+        
+        
+    </div>
+</body>
+<style>
+    p{
+        position:absolute;
+        display: none;
+    }
+
+    .passediego1{
+        width: 450px;
+        height: 550px;
+        background-image: url('https://i2.wp.com/mundorubronegro.com/wp-content/uploads/2019/11/gol-gabigol-flamengo-river-plate.jpeg?fit=1080%2C607&ssl=1');
+        background-size: 550px;
+        background-repeat: no-repeat;
+        
+    }
+    .passediego2{
+        width: 450px;
+        height: 450px;
+        background-image: url('https://i.ytimg.com/vi/59-EUw8MKAQ/hqdefault.jpg');
+        background-repeat: no-repeat;
+    }
+    
+</style>
+
+<script>
+    function mover(elem, inicio, fim, passo, callback){
+        const novoInicio = inicio - passo
+        if(novoInicio >= fim){
+            elem.style.left = novoInicio + 'px'
+           setTimeout(() => mover(elem, novoInicio, fim, passo, callback), 7)
+        } else{
+            callback()
+        }
+    }
+    //const p = document.querySelector('[wm-slide] > p')
+    //p.style.display = 'block'
+    //mover(p,1500,0,5, () => {
+    //    console.log('vai pra cima deles mengo')
+    //})
+
+    function slides(){
+        const elementos = document.querySelectorAll('[wm-slide] > p')
+        const slides = Array.from(elementos)
+        exibirSlides(slides,slides[0])
+    }
+
+    function exibirSlides(slides,slide){
+        slide.style.display = 'block'
+
+        const inicio = 1500
+        const fim = 0
+
+        slide.style.left = `${inicio}px`
+
+        mover(slide,inicio,fim,5,() => {
+            slide.style.display = 'block'
+            exibirSlides(slides, getProximo(slides,slide))
+        })
+    }
+        function getProximo(lista,atual){
+            const i = lista.indexOf(atual) + 1
+            return i < lista.length ? lista[i] : lista[0]
+            
+        }
+        
+
+    slides()
+</script>

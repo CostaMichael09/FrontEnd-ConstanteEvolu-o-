@@ -1,0 +1,57 @@
+<video id="Rei" width="800" height="450" controls>
+    <source src="http://files.cod3r.com.br/curso-web/video.mp4" type="video/mp4">
+</video>
+
+
+<div wm-progresso="Rei" class="progresso">
+    <div></div>
+</div>
+
+<div>
+    <button wm-play="Rei">Play</button>
+    <button wm-pause="Rei">Pause</button>
+</div>
+
+<style>
+    .progresso {
+        width: 500px;
+        height: 20px;
+        border: solid 1px #444;
+        margin: 20px; 
+    }
+
+    .progresso > div {
+        background-color: red;
+        color: white;
+        height: 100%;
+        text-align: right;
+        font-size: 14px;
+        width: 0%;
+    }
+</style>
+
+<script>
+    function configurarVideo(id){
+        const video = document.getElementById(id)
+        video.oncontextmenu = () => false
+
+        document.querySelector(`[wm-play=${id}]`).onclick = e => video.play()
+        document.querySelector(`[wm-pause=${id}]`).onclick = e => video.pause()
+
+        setInterval(() => {
+            const porcentagem = (video.currentTime / video.duration) * 100
+            const valorDiv = document.querySelector(`[wm-progresso=${id}] > div`)
+            valorDiv.style.width = `${porcentagem}%`
+            valorDiv.innerHTML = `${porcentagem.toFixed(1)}`
+        }, 500)
+    }
+
+    configurarVideo('Rei')
+</script>
+
+
+
+<iframe id="Rei0s" width="800" height="450" src="https://www.youtube.com/embed/IJojfT3KpC0" 
+frameborder="0" 
+>
+    </iframe>

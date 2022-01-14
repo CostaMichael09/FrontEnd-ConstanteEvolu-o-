@@ -1,0 +1,38 @@
+<h1>Projeto mercado</h1> 
+<ul class="tree">
+
+<ul>
+    <li>
+       <span wm-folder> mercado</span>
+        <ul>
+            <li>
+                <span wm-folder>produto de limpeza</span>
+                <ul>
+                    <li>Sabao</li>
+                    <li>Pasta de dente</li>
+                    <li>shampoo</li>
+                </ul>
+            </li>
+            <li>
+                <span wm-folder>Destilaria</span>
+                <ul>
+                    <li>cerveja</li>
+                    <li>Vinho</li>
+                    <li>Champanhe</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<link rel="stylesheet" href="http://files.cod3r.com.br/curso-web/tree.css">
+<script>
+    document.querySelectorAll('[wm-folder]').forEach(folder => {
+        folder.onclick = function(e){
+            const ul = folder.nextElementSibling
+            const display = ul.style.display
+
+            ul.style.display = display === 'none' ? 'block' : 'none'
+        }
+    })
+</script>

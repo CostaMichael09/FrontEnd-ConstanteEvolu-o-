@@ -1,0 +1,167 @@
+<div class="jumbtron p-4 my-1">
+    <h1 class="display-4">componentes</h1>
+    <p class="lead m-1">Alguns recursos importantes do Bootstrap</p>
+</div>
+
+<nav class="mb-5">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item">
+            <a href="#/paginas/bemVindo.html">Home</a>
+        </li>
+        <li class="breadcrumb-item active">componentes</li>
+    </ol>
+</nav>
+
+<h1>1. Botões -
+    <small>
+        <a href="https://getbootstrap.com/docs/4.0/components/buttons/" target="_black">Documentação Oficial</a>
+    </small>
+</h1>
+<hr>
+
+<!-- Botões -->
+
+<div>
+    <div class="mb-3">
+        <button class="btn btn-primary">Salvar</button>
+        <button class="btn btn-secundary">Cancelar</button>
+        <button class="btn btn-outline-success">Finalizar</button>
+        <button class="btn btn-danger"disabled>Excluir</button>
+        <button class="btn btn-warning"data-toggle="button">Selecione</button>
+
+    </div>
+
+    <div class="btn-group mb-3">
+        <button class="btn btn-info">esquerda</button>
+        <button class="btn btn-info active">centro</button>
+        <button class="btn btn-info">direita</button>
+
+    </div>
+
+    <div class="dropdown">
+        <button class="btn btn-danger btn-lg dropdown-toggle"data-toggle="dropdown">
+            Comprar!
+        </button>
+        <div class="dropdown-menu">
+            <a href="#" class="dropdown-item">Paypal</a>
+        </div>
+    </div>
+</div>
+
+
+<h1 class="mt-5">2. Progresso -
+    <small>
+        <a href="https://getbootstrap.com/docs/4.0/components/progress/" target="_black">Documentação Oficial</a>
+    </small>
+</h1>
+<hr>
+
+<!-- Progresso -->
+<div class="progress mb-3">
+    <div class="progress-bar" style="width: 25%;"></div>
+
+</div>
+
+<div class="progess mb-3">
+    
+</div>
+
+
+<h1 class="mt-5">3. Mensagens (Alertas) -
+    <small>
+        <a href="https://getbootstrap.com/docs/4.0/components/alerts/" target="_black">Documentação Oficial</a>
+    </small>
+</h1>
+<hr>
+
+<!-- Alertas -->
+
+<h1 class="mt-5">4. Paginação -
+    <small>
+        <a href="https://getbootstrap.com/docs/4.0/components/pagination/" target="_black">Documentação Oficial</a>
+    </small>
+</h1>
+<hr>
+
+<!-- Peginação -->
+<div>
+    <nav>
+        <ul class="pagination">
+            <li class="page-item">
+                <a href="#" class="page-link">Anterior</a>
+            </li>
+            <li class="page-item">
+                <a href="#" class="page-link">1</a>
+            </li>
+            <li class="page-item">
+                <a href="#" class="page-link">2</a>
+            </li>
+            <li class="page-item">
+                <a href="#" class="page-link">Proximo</a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+
+<h1 class="mt-5">5. Tooltip -
+    <small>
+        <a href="https://getbootstrap.com/docs/4.0/components/tooltip/" target="_black">Documentação Oficial</a>
+    </small>
+</h1>
+<hr>
+
+<!-- Tooltip -->
+<div>
+    <div class="alert-warning">
+        Preciso chamar JS!
+        <strong>E agora?</strong>
+    </div>
+    <button class="btn mt-3 btn-danger" data-toggle="tooltip" data-placement="top"
+     title="pense antes">Excluir</button>
+</div>
+
+
+<h1 class="mt-5">6. Slider -
+    <small>
+        <a href="https://getbootstrap.com/docs/4.0/components/carousel/" target="_black">Documentação Oficial</a>
+    </small>
+</h1>
+<hr>
+
+<!-- Slider -->
+
+
+
+<h1 class="mt-5">7. Accordion -
+    <small>
+        <a href="https://getbootstrap.com/docs/4.0/components/collapse/" target="_black">Documentação Oficial</a>
+    </small>
+</h1>
+<hr>
+
+<!-- Accordion -->
+<div>
+    <div class="mb-5" id="accordion">
+        <div class="card">
+            <div class="card-header" id="pegunta1">
+                <h5 class="mb-0">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#resposta1">
+                        quem e o cara mais picatofly?
+                    </button>
+                </h5>
+            </div>
+            <div class="collapse" id="resposta1" data-parent="#accordion">
+                <div class="card-body">
+                    Posso dizer?
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $('[data-toggle="tooltip"]').tooltip()
+</script>

@@ -1,0 +1,49 @@
+<h1>formulario</h1>
+
+<form method="POST">
+    <input type="hidden" name="id" value="3">
+    <input type="text" name="nome">
+    <input type="password" name="password">
+    <textarea name="Bio"  cols="30" rows="10"></textarea>
+    <div>
+        <input type="radio" name="Profissao" value="Professor" >Professor
+        <input type="radio" name="Profissao" value="Aluno">Aluno
+    </div>
+    
+    <div>
+        <input type="checkbox" name="Ativo" >Ativo
+    </div>
+
+    <div>
+        <select name="Estado" >
+            <option value="Rio de Janeiro">RJ</option>
+            <option value="Bahia">BA</option>
+            <option value="Minas Gerais">MG</option>
+        </select>
+        <select name="Cursos de interesse" multiple size="3">
+            <option value="Java">Java</option>
+            <option value="PHP">PHP</option>
+            <option value="MySQL">MySQL</option>
+        </select>
+
+    </div>
+
+    <button formaction="http://www.localhost:3003/usuarios">Adicionar</button>
+    <button formaction="http://www.localhost:3003/usuarios/3" formmethod="POST">Alterar</button>
+    
+</form>
+
+<style>
+    input, textarea{
+        display: block;
+        margin-bottom: 15px;
+    }
+    input[type=radio], input[type=checkbox]{
+        display: inline;
+        
+    }
+    select{
+        display:block;
+        margin-bottom: 10px;
+    }
+</style>

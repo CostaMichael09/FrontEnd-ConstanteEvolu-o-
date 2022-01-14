@@ -1,0 +1,7 @@
+body {
+    background-color: blue;
+    background-image: url(../imgs/Coringas.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Card</title>
+    <style>
+        .curso{
+            box-shadow: 0 4px 20px;
+            border:solid black 5px;
+            float: left;            
+            margin: 5px 20px;
+            width: 260px;
+            height: 300px;
+            padding: 5px;
+            
+        }
+
+        .curso img{
+            width: 100%;
+            max-height: 50%;
+        }
+        .curso-info{
+            padding: 10px;
+            height: 80px;
+            overflow: hidden;
+        }
+        .curso-info h4{
+            margin: 0;
+            font-size: 25px;
+            font-weight: 100;
+            
+        }
+        .curso-info p{
+            font-size: 18px;
+
+        }
+        .curso-preco{
+            text-align: right;
+            padding: 10px;
+        }
+        .preco-de{
+            font-size: 15px;
+            color: red;
+            text-decoration: line-through;
+        }
+        .preco-por{
+            font-size: 25px;
+            color: green;
+            font-weight: bolder;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <h1>Card</h1>
+
+    <h2>Objetivo</h2>
+    <img src="http://files.cod3r.com.br/curso-web/card.png" height="340" alt="Objetivo">
+
+    <h2>Resultado</h2>
+    <div>
+        <div class="curso">
+            <img src="http://files.cod3r.com.br/curso-web/curso1.jpg" />
+            <div class="curso-info">
+                <h4>Docker: Ferramenta essencial para Desenvolvedores</h4>
+                <p>Prof. Fulano</p>
+            </div>
+            <div class="curso-preco">
+                <span class="preco-de">R$80,00</span>
+                <span class="preco-por">R$50,00</span>
+            </div>
+        </div>
+        <div class="curso">
+            <img src="http://files.cod3r.com.br/curso-web/curso2.jpg" />
+            <div class="curso-info">
+                <h4>Web Moderno com Javascript + Projetos</h4>
+                <p>Prof. Sicrano Filho</p>
+            </div>
+            <div class="curso-preco">
+                <span class="preco-de">R$80,00</span>
+                <span class="preco-por">R$50,00</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
